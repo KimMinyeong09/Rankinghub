@@ -105,7 +105,7 @@
                             </div>
                         </div>
                         <div class="ranking__header pc-only">
-                            <p class="ranking__help-text">유저 TOP 50<br><span>랭킹은 주기적으로 갱신됩니다.</span>
+                            <p class="ranking__help-text">유저 TOP 50<br><span>스타 개수 20% + 팔로워 20% + 수정 코드 라인 20% + 커밋수 20% 기반으로 순위가 산출됩니다.</span>
                             </p>
                         </div>
                         <div class="ranking__content tier-view">
