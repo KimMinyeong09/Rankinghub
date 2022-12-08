@@ -21,7 +21,7 @@
 		public static Statement stmt = null;	// Statement object
 	    public static String sql = ""; // an SQL statement 
 	    public static ArrayList<Object[]> commits_url_list = new ArrayList<Object[]>();
-	    public static String github_token = "";	// 깃헙 토큰 추가!!!
+	    public static String github_token = "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";	// 깃헙 토큰 추가!!!
     %>
     
     <%!
@@ -849,8 +849,8 @@
     
     <%
 	    String URL = "jdbc:oracle:thin:@localhost:1521:orcl";
-		String USER_RANKINGHUB = "rankinghub";
-		String USER_PASSWD = "comp322";
+		String USER_RANKINGHUB = "gitrank";
+		String USER_PASSWD = "gitrank";
 		
 		String ID = (String)request.getParameter("ID");
 		String pass = (String)request.getParameter("pass");
@@ -864,7 +864,7 @@
 		user_info = get_user_info(ID);
 		if (user_info != null) {
 			// 깃헙 내 아이디가 존재하지 않은 경우
-			if (user_info.get("message") != null & user_info.get("message").equals("Not Found")) {
+			if (user_info.get("message") != null && user_info.get("message").equals("Not Found")) {
 				out.println("깃헙 내 존재하지 않은 아이디 입니다...\n");
 				response.sendRedirect("join.jsp");
 			}
@@ -907,7 +907,7 @@
 			
 			session.setAttribute("sid", github_id); // ID를 계속 사용하기 위해 session에 넣어준다.
 			
-			response.sendRedirect("index-user.jsp");
+			response.sendRedirect("../index-user.jsp");
 		}
 		else {
 			out.println(); 

@@ -32,7 +32,7 @@
               rs.close();
               out.println("<script>");
               out.println("alert('패스워드가 잘못입력되었습니다.')");
-              out.println(rs.getString(2) + " " + pass);
+              //out.println(rs.getString(2) + " " + pass);
               out.println("location.href='login.jsp'");
               out.println("</script>"); 
               }
